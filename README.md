@@ -1,12 +1,16 @@
-# Sample Auth Webhook for Hasura GraphQL engine
+# Important: Moved to [hasura/graphql-engine](https://github.com/hasura/graphql-engine/tree/master/community/boilerplates/auth-webhooks)
+
+The contents of this repo have been moved to [hasura/graphql-engine](https://github.com/hasura/graphql-engine/tree/master/community/boilerplates/auth-webhooks). Please create all issues and pull requests there.
+
+## Sample Auth Webhook for Hasura GraphQL engine
 
 This is a sample auth webhook for authenticating requests to the Hasura GraphQL engine.
 
 It has boilerplate code written for auth0 and firebase auth. There is also a generic sample handler in `server.js` where you can handle your custom auth providers.
 
-## Quick deploy
+### Quick deploy
 
-### Deploy with Heroku (recommended)
+#### Deploy with Heroku (recommended)
 
 1. Click the following button for deploying to Heroku.
 
@@ -33,7 +37,7 @@ It has boilerplate code written for auth0 and firebase auth. There is also a gen
 
    If you are not using an auth provider, you need not enter the environment variable associated with it
 
-### Deploy using [Now](https://zeit.co/now)
+#### Deploy using [Now](https://zeit.co/now)
 
 Run the following commands to deploy using Now.
 
@@ -63,7 +67,7 @@ $ now -e \
   AUTH_ZERO_DOMAIN='test.auth0.com'
 ```
 
-### Deploy with Glitch
+#### Deploy with Glitch
 
 1. Click the following button to edit on glitch
 
@@ -93,13 +97,13 @@ $ now -e \
      AUTH_ZERO_DOMAIN='test.auth0.com'
    ```
 
-## Usage with Hasura GraphQL engine
+### Usage with Hasura GraphQL engine
 
 Once you have deployed this webhook, you can use it along with the GraphQL engine. You have to set the webhook URL as an environment variable in the docker container that runs the GraphQL engine.
 
 *[Read the docs](https://docs.hasura.io/1.0/graphql/manual/auth/webhook.html).*
 
-### Auth0
+#### Auth0
 
 Send the auth0 `access_token` as a header  while making queries to the `graphql-engine`.
 
@@ -109,7 +113,7 @@ Send the auth0 `access_token` as a header  while making queries to the `graphql-
 }
 ```
 
-### Firebase
+#### Firebase
 
 Send the firebase `id_token` as a header while making queries to the `graphql-engine`.
 
